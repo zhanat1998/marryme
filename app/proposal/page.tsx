@@ -365,7 +365,7 @@ export default function Home() {
             <span className="font-bold gradient-text text-xl">marryme_007</span>
             <p className="text-gray-600 text-xs mt-0.5">Организация предложения руки и сердца</p>
           </div>
-          <p className="text-gray-400 text-sm">© 2025 Merry Me. Бишкек, Кыргызстан</p>
+          <p className="text-gray-400 text-sm">© 2025 marryme_007. Бишкек, Кыргызстан</p>
           <a
             href="https://www.instagram.com/marryme_007_/"
             target="_blank"
