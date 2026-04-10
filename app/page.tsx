@@ -73,7 +73,7 @@ export default function Home() {
       {/* CATEGORIES */}
       <section className="px-4 pb-20 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {categories.map((cat) => (
+          {categories.map((cat, i) => (
             <Link
               key={cat.href + cat.title}
               href={cat.href}
@@ -86,7 +86,8 @@ export default function Home() {
                   fill
                   className={`object-cover group-hover:scale-105 transition-transform duration-500 ${cat.src === "/mama.png" ? "object-bottom" : "object-center"}`}
                   sizes="(max-width: 640px) 100vw, 50vw"
-                  quality={100}
+                  quality={80}
+                  priority={i === 0}
                 />
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />

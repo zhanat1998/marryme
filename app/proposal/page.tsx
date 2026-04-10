@@ -22,7 +22,6 @@ export default function Home() {
         { icon: "🎼", text: "Музыкальное сопровождение" },
         { icon: "🧨", text: "4 холодных фонтана" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
     },
     {
       tag: "Премиум",
@@ -43,31 +42,24 @@ export default function Home() {
         { icon: "🎼", text: "Музыкальное сопровождение" },
         { icon: "🧨", text: "4 холодных фонтана" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
     },
   ];
 
   const reels = [
     {
       src: "/reel1.png",
-      caption: "Нурайым Акылбекова",
       date: "21.07.2025",
       label: "Сказала «Да!» 💍",
-      link: "https://www.instagram.com/p/DMX8xg_MBNT/",
     },
     {
       src: "/client3.png",
-      caption: "Marry Me",
       date: "2025",
       label: "Холодные фонтаны ❤️‍🔥",
-      link: "https://www.instagram.com/marryme_007_/",
     },
     {
       src: "/reel2.png",
-      caption: "На берегу",
       date: "2025",
       label: "Предложение у воды 🌊",
-      link: "https://www.instagram.com/marryme_007_/",
     },
   ];
 
@@ -165,15 +157,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {reels.map((r) => (
-              <div key={r.link + r.date} className="relative overflow-hidden card-hover">
+              <div key={r.src} className="relative overflow-hidden card-hover">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={r.src}
-                    alt={r.caption}
+                    alt={r.label}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    quality={100}
+                    quality={75}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">

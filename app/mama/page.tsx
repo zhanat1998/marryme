@@ -23,7 +23,7 @@ export default function MamaPage() {
         { icon: "🪟", text: "Стеклянные подставки" },
         { icon: "🎼", text: "Музыкальное сопровождение" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
+
     },
     {
       tag: "Премиум",
@@ -45,7 +45,7 @@ export default function MamaPage() {
         { icon: "🪟", text: "Стеклянные подставки" },
         { icon: "🎼", text: "Музыкальное сопровождение" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
+
     },
   ];
 

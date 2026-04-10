@@ -23,7 +23,7 @@ export default function BirthdayPage() {
         { icon: "🪟", text: "Стеклянные подставки" },
         { icon: "🎼", text: "Музыкальное сопровождение" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
+
     },
     {
       tag: "Премиум",
@@ -44,7 +44,7 @@ export default function BirthdayPage() {
         { icon: "🪟", text: "Стеклянные подставки" },
         { icon: "🎼", text: "Музыкальное сопровождение" },
       ],
-      extra: [{ icon: "🎆", text: "Салют — 3 000 сом" }],
+
     },
   ];
 
@@ -137,7 +137,7 @@ export default function BirthdayPage() {
               <div key={r.label} className="relative overflow-hidden card-hover">
                 <div className="relative aspect-[4/3] w-full">
                   <Image src={r.src} alt={r.label} fill
-                    className="object-cover" sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover" sizes="(max-width: 768px) 100vw, 33vw"
                      />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
