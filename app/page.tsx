@@ -36,7 +36,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <span className="text-xl font-bold gradient-text">marryme_007</span>
-            <span className="text-gray-500 text-xs ml-2 hidden sm:inline">Бишкек</span>
+            <span className="text-gray-400 text-xs ml-2 hidden sm:inline">Бишкек</span>
           </div>
           <a
             href="https://wa.me/996502454647"
@@ -147,7 +147,7 @@ export default function Home() {
       <footer className="border-t border-white/5 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-bold gradient-text text-xl">marryme_007</span>
-          <p className="text-gray-500 text-sm">© 2025 Merry Me. Бишкек, Кыргызстан</p>
+          <p className="text-gray-400 text-sm">© 2025 Merry Me. Бишкек, Кыргызстан</p>
           <a
             href="https://www.instagram.com/marryme_007_/"
             target="_blank"

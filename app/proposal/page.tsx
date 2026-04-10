@@ -53,6 +53,7 @@ export default function Home() {
     },
     {
       src: "/client3.png",
+      video: "/fountain",
       date: "2025",
       label: "Холодные фонтаны ❤️‍🔥",
     },
@@ -159,14 +160,27 @@ export default function Home() {
             {reels.map((r) => (
               <div key={r.src} className="relative overflow-hidden card-hover">
                 <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={r.src}
-                    alt={r.label}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    quality={75}
-                  />
+                  {r.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover object-bottom"
+                    >
+                      <source src={`${r.video}.webm`} type="video/webm" />
+                      <source src={`${r.video}.mp4`} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={r.src}
+                      alt={r.label}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={75}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <p className="text-white font-bold text-2xl leading-tight">{r.label}</p>
@@ -244,12 +258,12 @@ export default function Home() {
                   <span className="text-5xl font-extrabold">{pkg.price}</span>
                   <div>
                     <div className="text-gray-400 text-sm">сом</div>
-                    <div className="text-gray-500 text-sm line-through">{pkg.oldPrice} сом</div>
+                    <div className="text-gray-400 text-sm line-through">{pkg.oldPrice} сом</div>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold">
+                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-3 font-semibold">
                     Что входит:
                   </p>
                   <ul className="space-y-2.5">
@@ -274,7 +288,7 @@ export default function Home() {
                   >
                     Заказать этот пакет
                   </a>
-                  <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
+                  <div className="flex items-center justify-center gap-2 text-gray-400 text-xs">
                     <span>🚗</span>
                     <span>Выезд и установка по городу — бесплатно</span>
                   </div>
@@ -351,7 +365,7 @@ export default function Home() {
             <span className="font-bold gradient-text text-xl">marryme_007</span>
             <p className="text-gray-600 text-xs mt-0.5">Организация предложения руки и сердца</p>
           </div>
-          <p className="text-gray-500 text-sm">© 2025 Merry Me. Бишкек, Кыргызстан</p>
+          <p className="text-gray-400 text-sm">© 2025 Merry Me. Бишкек, Кыргызстан</p>
           <a
             href="https://www.instagram.com/marryme_007_/"
             target="_blank"

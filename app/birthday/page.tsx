@@ -56,8 +56,9 @@ export default function BirthdayPage() {
     },
     {
       src: "/bday2.png",
-      label: "Сюрприз от любимого 💑",
-      desc: "Лепестки роз, свечи и объятия под светящимся сердцем",
+      video: "/bday-video",
+      label: "Подарок от близких 🎁",
+      desc: "Самые родные устроили незабываемый сюрприз — холодные фонтаны, свет и любовь",
     },
     {
       src: "/bday3.png",
@@ -136,9 +137,22 @@ export default function BirthdayPage() {
             {reels.map((r) => (
               <div key={r.label} className="relative overflow-hidden card-hover">
                 <div className="relative aspect-[4/3] w-full">
-                  <Image src={r.src} alt={r.label} fill
-                    className="object-cover" sizes="(max-width: 768px) 100vw, 33vw"
-                     />
+                  {r.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                    >
+                      <source src={`${r.video}.webm`} type="video/webm" />
+                      <source src={`${r.video}.mp4`} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image src={r.src} alt={r.label} fill
+                      className="object-cover" sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <p className="text-white font-bold text-2xl leading-tight">{r.label}</p>
@@ -187,11 +201,11 @@ export default function BirthdayPage() {
                   <span className="text-5xl font-extrabold">{pkg.price}</span>
                   <div>
                     <div className="text-gray-400 text-sm">сом</div>
-                    <div className="text-gray-500 text-sm line-through">{pkg.oldPrice} сом</div>
+                    <div className="text-gray-400 text-sm line-through">{pkg.oldPrice} сом</div>
                   </div>
                 </div>
                 <div className="mb-8">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-3 font-semibold">Что входит:</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-3 font-semibold">Что входит:</p>
                   <ul className="space-y-2.5">
                     {pkg.includes.map((item) => (
                       <li key={item.text} className="flex items-start gap-3 text-sm">
@@ -207,7 +221,7 @@ export default function BirthdayPage() {
                   }`}>
                   Заказать этот пакет
                 </a>
-                <div className="flex items-center justify-center gap-2 text-gray-500 text-xs mt-3">
+                <div className="flex items-center justify-center gap-2 text-gray-400 text-xs mt-3">
                   <span>🚗</span>
                   <span>Выезд и установка по городу — бесплатно</span>
                 </div>
@@ -272,7 +286,7 @@ export default function BirthdayPage() {
       <footer className="border-t border-white/5 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-bold gradient-text text-xl">marryme_007</span>
-          <p className="text-gray-500 text-sm">© 2025 marryme_007. Бишкек, Кыргызстан</p>
+          <p className="text-gray-400 text-sm">© 2025 marryme_007. Бишкек, Кыргызстан</p>
           <a href="https://www.instagram.com/marryme_007_/" target="_blank" rel="noopener noreferrer"
             className="text-gray-400 hover:text-fuchsia-400 transition-colors text-sm">
             @marryme_007
